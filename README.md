@@ -65,4 +65,4 @@ This script facilitates automated remote backups using `cron` and `scp` for secu
 - Review logs (`/var/log/backup.log`) to ensure backups are running smoothly and troubleshoot any issues.
 
 ## License
-This project is licensed under the [GNU General Public License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
