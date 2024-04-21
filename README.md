@@ -44,10 +44,10 @@ This script facilitates automated remote backups using `cron` and `scp` for secu
     Add the following line to schedule the script to run periodically:
 
     ```cron
-    0 0 * * * /opt/scp-backup.sh >/dev/null 2>&1
+    20 4 * * * /opt/scp-backup.sh >/dev/null 2>&1
     ```
 
-    This example runs the backup script daily at 00:00 AM. Adjust the schedule as needed.
+    This example runs the backup script daily at 04:20 AM. Adjust the schedule as needed.
 
 4. **Save and Exit**:
 
