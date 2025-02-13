@@ -34,6 +34,12 @@ BACKUP_DIRECTORIES=("/etc" "/home" "/opt" "/root" "/var")
 # Option to keep local copies (true or false)
 SAVE_LOCAL_COPIES=false
 
+# Remove old backup directories in /tmp if SAVE_LOCAL_COPIES is false
+if [ "$SAVE_LOCAL_COPIES" = false ]; then
+    find /tmp -maxdepth 1 -type d -name "backup_*" -exec rm -rf {} +
+    log_message "Old temporary backup directories removed from /tmp"
+fi
+
 # Create timestamp for backup
 NOW=$(date '+%Y-%m-%d_%H-%M-%S')
 BACKUP_DIR_NAME="backup_$NOW"
